@@ -1,0 +1,8 @@
+# Typst build artifacts
+*.pdf
+*.png
+*.svg
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+[package]
+name = "my-typst-project"
+version = "0.1.0"
+entrypoint = "main.typ"
+
+[compiler]
+compiler = "0.14.0"
+# Add font path configuration to include the current directory
+font-path = ["."]
