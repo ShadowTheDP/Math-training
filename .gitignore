@@ -1,5 +1,6 @@
 # Typst build artifacts
 *.pdf
+!results/*.pdf
 *.png
 *.svg
 
