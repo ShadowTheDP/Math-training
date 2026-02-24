@@ -1,0 +1,27 @@
+The following changes have been made to the project:
+
+1.  **修正編號偏移問題 (Numbering Offset Fix)**:
+    -   解決了 `Note-to-EGMO.typ` 與 `Note-to-MONT.typ` 中 Preliminaries (Chapter 0) 的詞條編號從 1.1 開始而非 0.1 的問題。
+    -   修改了 `utils/heading.typ`：
+        -   移除了 `show heading.where(level: 1)` 中冗餘的 `counter("heading").step(level: 1)` 調用。
+        -   在 `custom-numbering` 與各級標題的渲染邏輯中，將第一位數字減 1（即 `ns.at(0) - 1`），使首個一級標題（Preliminaries）對應為 Chapter 0。
+        -   確保數學環境計數器 `math-theorem` 在每一章開始時正確更新為 `(c.at(0) - 1, 0)`。
+    -   修改了 `utils/utils.typ` 中的 `show-counter` 輔助函數以簡化邏輯。
+
+2.  **標準化詞條描述格式 (Formatting Standardization)**:
+    -   手動檢查並修復了 `Note-to-MONT.typ` 中所有 `#problem` 詞條的 `desp` 欄位。
+    -   確保所有引用書中編號的描述（如 "Problem 1.1."）在括號結尾或編號結尾均帶有一個英文句點 "."。
+    -   對 `Note-to-EGMO.typ` 進行了全面審計，確認其符合結尾加點的規範。
+
+3.  **Note-to-MONT.typ 內容修正**:
+    -   修復了 "Collected Results" 章節中殘留的 LaTeX 語法（如 `\lfloor`, `\sum_{d|n}`, `binom(m,n) equiv product_{...}`），將其轉換為 Typst 原生語法（如 `floor`, `sum_(d|n)`, `product_(i=0)^k`）。
+    -   移除了重複的章節內容（原有的第 11 至 17 章）。
+
+4.  **PDF 編譯與驗證**:
+    -   使用 Typst 0.14.2 成功編譯了兩個筆記檔案。
+    -   輸出的 PDF 檔案位於 `./Result-for-project/Typst/`：
+        -   `Note-to-MONT.pdf`
+        -   `Note-to-EGMO.pdf`
+
+5.  **環境說明**:
+    -   編譯過程中出現的字體缺失警告（如 Noto Serif CJK, Charter 等）為環境限制，不影響 PDF 的結構生成，但建議在安裝有對應字體的環境中進行最終渲染。

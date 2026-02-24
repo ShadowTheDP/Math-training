@@ -63,7 +63,7 @@ Here's some common used notation in this pdf:
 ]
 
 #problem(
-  desp: "Problem 1.36"
+  desp: "Problem 1.36."
 )[
   Let $A B C D E$ be a convex pentagon such that $B C D E$ is a square with center $O$ and $angle A = 90degree$. Prove that $A O$ bisects $angle B A E$.
 ]
@@ -99,7 +99,7 @@ Here's some common used notation in this pdf:
 ]
 
 #problem(
-  desp: "Problem 1.37 (BAMO 1999/2)"
+  desp: "Problem 1.37 (BAMO 1999/2)."
 )[
   Let $O = (0, 0), A = (0, a), "and" B = (0, b)$, where $0 < a < b$ are reals. Let $Gamma$ be a circle with diameter $A B$ and let $P$ be any other point on $Gamma$. Line $P A$ meets the $x$-axis again at $Q$. Prove that $angle B Q P = angle B O P$.
 ]
@@ -2517,7 +2517,7 @@ Prove that $Q_1 Q_2 parallel A B$ if and only if $Q_1 Q_2 parallel C D$.
 ]
 
 #problem(
-  desp: "Problem 5.28 (IMO 2001/1). "
+  desp: "Problem 5.28 (IMO 2001/1)."
 )[
   Consider an acute-angled triangle $A B C$. Let $P$ be the foot of the altitude of triangle $A B C$ issuing from the vertex $A$, and let $O$ be the circumcenter of triangle $A B C$. Assume that $angle C >= angle B + 30 degree$. Prove that $angle A + angle C O P < 90 degree$.
 ]
@@ -2672,7 +2672,7 @@ Prove that $Q_1 Q_2 parallel A B$ if and only if $Q_1 Q_2 parallel C D$.
 ]
 
 #problem(
-  desp: "Problem 6.33 (Chinese TST 2011). "
+  desp: "Problem 6.33 (Chinese TST 2011)."
 )[
   Let $A B C$ be a triangle, and let $A', B', C'$ be points on its circumcircle, diametrically opposite $A, B, C$, respectively. Let $P$ be any point inside $A B C$ and let $D, E, F$ be the feet of the altitudes from $P$ onto $B C, C A, A B$, respectively. Let $X, Y, Z$ denote the reflections of $A', B', C'$ over $D, E, F$, respectively. Show that triangles $X Y Z$ and $A B C$ are similar to each other.
 ]
@@ -2726,7 +2726,7 @@ Prove that $Q_1 Q_2 parallel A B$ if and only if $Q_1 Q_2 parallel C D$.
 ]
 
 #problem(
-  desp: "Problem 8.25. "
+  desp: "Problem 8.25."
 )[
   Let $A, B, C$ be three collinear points and $P$ be a point not on this line. Prove that the circumcenters of $triangle P A B, triangle P B C, "and" triangle P C A$ lie on a circle passing through $P$.
 ]

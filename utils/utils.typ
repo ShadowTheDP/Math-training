@@ -79,9 +79,6 @@
 
 #let show-counter(list, last) = {
   let list = list
-  if list.len() > 0 {
-    list.at(0) -= 1
-  }
   let s = list.map(str).join(".")
   if last != none {
     s + last
