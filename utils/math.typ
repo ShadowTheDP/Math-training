@@ -83,6 +83,8 @@
   if reset {
     counter("claim_p").update(0)
     counter("lemma_p").update(0)
+    counter("case-p").update(0)
+    state("case-p-depth").update(0)
   }
   if has(desp) {
     title = title + strong(" (" + desp + ").")
@@ -161,3 +163,44 @@
     #body2
   ]
 }
+
+#let case-p(
+    title,
+    body
+  ) = {
+    let depth-state = state("case-p-depth", 0)
+    depth-state.update(d => d + 1)
+    
+    context {
+      let d = depth-state.get()
+      counter("case-p").step(level: d)
+    }
+    
+    context {
+      let d = depth-state.get()
+      // 參考 claim-p 與 lemma-p 的風格：使用極淺背景色與對應深色文字
+      // 這裡選擇綠色系 (rgb 0, 128, 0) 來區分紅色的 Claim 和藍色的 Lemma
+      let bg-color = rgb(0, 128, 0, 8)
+      let text-color = colors.green
+      
+      block(
+        spacing: rem(1.5), 
+        width: 100%, 
+        fill: bg-color, 
+        inset: rem(1), 
+        radius: 2pt
+      )[
+        #text(weight: "bold", fill: text-color)[
+          case #counter("case-p").display("1.1") -
+        ]
+        #h(0.2em)
+        #strong(title)
+        
+        #block(inset: (left: rem(0.5), top: rem(0.4)), width: 100%)[
+          #body
+        ]
+      ]
+    }
+    
+    depth-state.update(d => d - 1)
+  }
