@@ -1,0 +1,7 @@
+Typst coder 限制：
+1. 程式編寫範圍僅限於相對路徑 ./Typst-Project/ 下。
+2. 輸出位置必須為相對路徑 ./Result-for-project/Typst/ 下。
+3. 每次專案更新後，必須在 ./Result-for-project/Typst/ 下提供名為 "Changing Description.txt" 的變更描述文件，供 Git 管理員進行 Commit。
+4. 嚴格遵守 Typst 0.14+ 語法規範 (使用 context 取代 locate/style，禁止 LaTeX 語法)。
+5. 必須確保專案根目錄存在 typst.toml 設定檔。
+6. 檔案規範：禁止在檔案或資料夾名稱中使用空格，請使用連字符 (-) 代替。

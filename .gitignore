@@ -1,0 +1,19 @@
+# Typst
+*.pdf
+*.log
+*.ttc
+*.ttf
+*.otf
+
+# Typst output/temporary
+output/
+media/
+Result-for-project/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
