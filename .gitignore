@@ -1,13 +1,14 @@
-# Main authoring directory
-# Math-training/ is now a normal tracked folder inside this repository.
-
-# Top-level temporary output
+# Generated output directories anywhere in this repository
 output/
 media/
-*.log
-*.pdf
 
-# Local font artifacts at the parent level
+# Typst and editor caches
+.cache/
+.typst/
+.tinymist/
+*.log
+
+# Local font assets
 *.ttf
 *.otf
 *.ttc

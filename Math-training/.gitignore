@@ -1,10 +1,18 @@
-# Typst build artifacts
+# Generated output
 output/
 media/
-*.pdf
-*.png
-*.svg
+
+# Typst and editor caches
+.cache/
+.typst/
+.tinymist/
 *.log
+
+# Local font assets
+ukai.ttc
+*.ttf
+*.otf
+*.ttc
 
 # System files
 .DS_Store

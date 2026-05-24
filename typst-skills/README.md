@@ -1,22 +1,53 @@
-# Typst agent skills
+# Typst Agent Skills
 
-This repository contains a collection of agent skills for writing, editing, and debuging [Typst](https://typst.app) documents.
+This directory bundles local agent skills for writing, editing, and debugging
+[Typst](https://typst.app) documents inside the parent `Take-Down-IMO`
+repository.
 
-Most models struggle with Typst syntax since it's relatively new compared to LaTeX. These skills solve that by including local copies of documentation, examples, and specialized prompts. Instead of hallucinating syntax or guessing based on outdated training data, the agent is instructed to search through these local resources to find the correct functions and parameters before writing code.
+It is support material, not the main authoring workspace.
 
-## Available skills
+Repo-wide project rules still live in `../README.md`.
+
+Most models struggle with Typst syntax because it is newer and less familiar
+than LaTeX. These skills help by including local copies of documentation,
+examples, and specialized prompts. Instead of guessing syntax or relying on
+outdated memory, an agent should search these local resources before writing or
+editing Typst files.
+
+## Directory Role
+
+Use this directory when you need agent-side reference material.
+
+Do not use it as the place to write the main project documents. The real
+Typst authoring work belongs in `../Math-training/`.
+
+## Available Skills
 
 ### [typst-author](./typst-author/)
-The general-purpose skill for writing Typst documents. It includes a complete mirror of the official Typst documentation (references, tutorials, and guides).
+
+The general-purpose skill for writing Typst documents. It includes a local
+mirror of the official Typst documentation, including references, tutorials,
+and guides.
 
 ### [touying-author](./touying-author/)
-A specialized skill for creating presentation slides using the [Touying](https://github.com/touying-typ/touying) package. It includes a full local copy of the Touying documentation, along with examples for creating slide decks, animations, and custom themes.
+
+A specialized skill for creating presentation slides using the
+[Touying](https://github.com/touying-typ/touying) package. It includes a local
+copy of Touying documentation and examples for slide decks, animations, and
+custom themes.
 
 ## Usage
 
-If you are using an agent that supports the [Agent Skills](https://agentskills.io/home) open standard:
+If you are using an agent that supports the
+[Agent Skills](https://agentskills.io/home) open standard:
 
 1. Clone this repository.
-2. Move or copy the individual skill directories (`typst-author`, `touying-author`) into the `skills/` folder of your agentic coding assistant.
+2. Move or copy the individual skill directories (`typst-author`,
+   `touying-author`) into the `skills/` folder of your agentic coding
+   assistant.
 
-The agent should automatically detect the skills and use them whenever you ask for help with Typst files or Touying presentation slides.
+Inside this workspace, the usual pattern is simpler:
+
+1. Work on Typst source in `../Math-training/`.
+2. Read from this directory when the agent needs Typst or Touying reference
+   material.
