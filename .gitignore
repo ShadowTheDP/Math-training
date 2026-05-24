@@ -1,14 +1,16 @@
-# Typst
-*.pdf
-*.log
-*.ttc
-*.ttf
-*.otf
+# Main authoring directory
+# Math-training/ is now a normal tracked folder inside this repository.
 
-# Typst output/temporary
+# Top-level temporary output
 output/
 media/
-Result-for-project/
+*.log
+*.pdf
+
+# Local font artifacts at the parent level
+*.ttf
+*.otf
+*.ttc
 
 # IDE
 .vscode/
